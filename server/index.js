@@ -6,25 +6,25 @@ const port = process.env.PORT || 3000;
 
 app.use(express.static(path.join(__dirname,'../public')));
 
-// console.log(window.location);
-
-// app.get('/:id', (req, res) => {
-
+// app.get('/photosandcomments/:id', (req, res) => {
+//   axios.get(`http://localhost:3001/photosandcomments/${req.params.id}`)
+//     .then((response) => res.send(response.data) );
 // })
 
+// app.get('/abodes/:abode_id/reviews', (req, res) => {
+//   // console.log(req.params.id);
+//   axios.get(`http://localhost:3002/abodes/${req.params.abode_id}/reviews`)
+//     .then(response => res.send(response.data))
+//     .catch(err => res.status(404).end(err));
+// })
 
 app.get('/abodes/:abode_id/reviews', (req, res) => {
-  console.log(req.params.id);
+  // console.log(req.params.id);
   axios.get(`http://localhost:3002/abodes/${req.params.abode_id}/reviews`)
     .then(response => res.send(response.data))
     .catch(err => res.status(404).end(err));
 })
 
-// app.get('http://localhost:3001/photosandcomments/:id', (req, res) => {
-//   console.log(req.params.id);
-//   axios.get(`http://localhost:3001/photosandcomments/${req.params.id}`)
-//     .then((response) => console.log(response) );
-// })
 
 {/* <script src="http://localhost:3001/carousel.app.js"></script>
 <script src="http://localhost:3002/app.js"></script>
