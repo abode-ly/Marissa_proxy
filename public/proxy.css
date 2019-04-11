@@ -23,16 +23,37 @@
   width: 100%;
 }
 
-/* #booking-module{
+#reviews {
+  width: 100%;
+  position: relative;
+}
+
+.hostInfo{
+  width: 100%;
+}
+
+.neighborhood {
+  width: 100%;
+}
+
+.policies {
+  width: 100%;
+}
+/* 
+#booking-module {
   width: 45%;
   position: sticky;
   top: 50%;
   left: 48%;
 } */
 
-#reviews {
+.thingsExplore {
   width: 100%;
-  position: relative;
+}
+/* ^^UGLY^^ */
+
+.otherLinks {
+  width: 100%;
 }
 
 @media only screen and (max-width: 1125px) {
@@ -41,11 +62,15 @@
     flex-direction: column;
   }
 
+  .left{
+    width: 100%;
+  }
+/* 
   #reviews {
     width: 100%;
   }
 
   #booking-module{
     width: 100%;
-  }
+  } */
 }
