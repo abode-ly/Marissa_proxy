@@ -6,21 +6,24 @@ const port = process.env.PORT || 3000;
 
 app.use(express.static(path.join(__dirname,'../public')));
 
+app.get('/:path', (req, res) => {
+  res.sendFile(path.join(__dirname,'../public/index.html'));
+});
+
 app.get('/photosandcomments/:id', (req, res) => {
   axios.get(`http://localhost:3001/photosandcomments/${req.params.id}`)
-    .then((response) => res.send(response.data) )
-    .catch(err => res.status(404).end(err));
+  .then((response) => res.send(response.data) )
+  .catch(err => res.status(404).end(err));
 })
 
 app.get('/abodes/:abode_id/reviews', (req, res) => {
-  // console.log(req.params.id);
   axios.get(`http://localhost:3002/abodes/${req.params.abode_id}/reviews`)
     .then(response => res.send(response.data))
     .catch(err => res.status(404).end(err));
 })
 
-app.get('/homes', (req, res) => {
-  axios.get(`http://localhost:3004/homes`)
+app.get('/similarhomes/:host_id/nearby', (req, res) => {
+  axios.get(`http://localhost:3004/similarhomes/${req.params.host_id}/nearby`)
     .then(response => res.send(response.data))
     .catch(err => res.status(404).end(err));
 })
@@ -36,11 +39,6 @@ app.get('/bookings/:accommodationID/reserve/:startDate&:endDate', (req, res) => 
     .then(response => res.send(response.data))
     .catch(err => res.status(404).end(err));
 })
-
-{/* <script src="http://localhost:3001/carousel.app.js"></script>
-<script src="http://localhost:3002/app.js"></script>
-<script src="http://localhost:3003/BookingModule.bundle.js"></script>
-<script src="http://localhost:3004/nearbyHomes.app.js"></script> */}
 
 app.listen(port, () => {
   console.log('in the server');

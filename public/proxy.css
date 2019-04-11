@@ -1,0 +1,31 @@
+/* #bookingAndReviews{
+  display: inline-flex;
+  justify-content: space-between;
+  padding: 1em;
+}
+
+#booking-module{
+  width: 45%;
+  position: sticky;
+  top: 50%;
+  left: 48%;
+}
+
+#reviews {
+  width: 52%;
+}
+
+@media only screen and (max-width: 1125px) {
+  #bookingAndReviews {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #reviews {
+    width: 100%;
+  }
+
+  #booking-module{
+    width: 100%;
+  }
+} */
