@@ -1,22 +1,42 @@
-/* #bookingAndReviews{
+.searchBar{
+  width: 100%;
+}
+
+#leftRight{
   display: inline-flex;
   justify-content: space-between;
   padding: 1em;
 }
 
-#booking-module{
+.left{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 60%;
+}
+
+.homeInfo{
+  width: 100%;
+}
+
+.amenities{
+  width: 100%;
+}
+
+/* #booking-module{
   width: 45%;
   position: sticky;
   top: 50%;
   left: 48%;
-}
+} */
 
 #reviews {
-  width: 52%;
+  width: 100%;
+  position: relative;
 }
 
 @media only screen and (max-width: 1125px) {
-  #bookingAndReviews {
+  #leftRight {
     display: flex;
     flex-direction: column;
   }
@@ -28,4 +48,4 @@
   #booking-module{
     width: 100%;
   }
-} */
+}
