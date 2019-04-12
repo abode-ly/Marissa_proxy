@@ -25,7 +25,6 @@
 
 #reviews {
   width: 100%;
-  position: relative;
 }
 
 .hostInfo{
@@ -50,7 +49,6 @@
 .thingsExplore {
   width: 100%;
 }
-/* ^^UGLY^^ */
 
 .otherLinks {
   width: 100%;
@@ -60,17 +58,34 @@
   #leftRight {
     display: flex;
     flex-direction: column;
+    width: 75vw;
   }
-
+  
   .left{
-    width: 100%;
-  }
-/* 
-  #reviews {
     width: 100%;
   }
 
   #booking-module{
+    display: none;
+  }
+
+  .homeInfo{
     width: 100%;
-  } */
+  }
+  
+  .amenities{
+    width: 100%;
+  }
+  
+  .hostInfo{
+    width: 100%;
+  }
+
+  .neighborhood {
+    width: 100%;
+  }
+
+  .policies {
+    width: 100%;
+  }
 }
