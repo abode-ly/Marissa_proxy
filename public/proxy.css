@@ -1,0 +1,91 @@
+.searchBar{
+  width: 100%;
+}
+
+#leftRight{
+  display: inline-flex;
+  justify-content: space-between;
+  padding: 1em;
+}
+
+.left{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 60%;
+}
+
+.homeInfo{
+  width: 100%;
+}
+
+.amenities{
+  width: 100%;
+}
+
+#reviews {
+  width: 100%;
+}
+
+.hostInfo{
+  width: 100%;
+}
+
+.neighborhood {
+  width: 100%;
+}
+
+.policies {
+  width: 100%;
+}
+/* 
+#booking-module {
+  width: 45%;
+  position: sticky;
+  top: 50%;
+  left: 48%;
+} */
+
+.thingsExplore {
+  width: 100%;
+}
+
+.otherLinks {
+  width: 100%;
+}
+
+@media only screen and (max-width: 1125px) {
+  #leftRight {
+    display: flex;
+    flex-direction: column;
+    width: 75vw;
+  }
+  
+  .left{
+    width: 100%;
+  }
+
+  #booking-module{
+    display: none;
+  }
+
+  .homeInfo{
+    width: 100%;
+  }
+  
+  .amenities{
+    width: 100%;
+  }
+  
+  .hostInfo{
+    width: 100%;
+  }
+
+  .neighborhood {
+    width: 100%;
+  }
+
+  .policies {
+    width: 100%;
+  }
+}
